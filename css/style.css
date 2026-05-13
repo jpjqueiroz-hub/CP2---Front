@@ -1,33 +1,35 @@
 @font-face {
-    font-family: Outfit-Light;
-    src: url(../fonts/Outfit-Light.ttf);
+    font-family: Inter-light;
+    src: url(../fonts/Inter_18pt-Light.ttf);
 }
+
 @font-face {
-    font-family: Outfit-Bold;
-    src: url(../fonts/Outfit-Bold.ttf);
+    font-family: Inter-bold;
+    src: url(../fonts/Inter_18pt-Bold.ttf);
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Outfit-Light;
+    font-family: Inter-light;
 }
 
 :root{
     --color-blue: #5166ee;
-    --color-white: #f0f0f0;
+    --color-white: #e6e6e6;
     --color-blue-light: #E1EAFE;
-    --color-text: #0F1117;
+    --color-text: #0d0d0e;
+    --font-size-title: 50px;
+    --font-size-subtitle: 20px;
+    --font-size-text: 15px;
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 30px;
-    --padding-sm: 60px;
-    --padding-md: 80px;
-    --padding-lg: 100px;
-    --font-size-title: 40px;
-    --font-size-subtitle: 20px;
-    --font-size-text: 15px;
+    --gap-sm: 50px;
+    --gap-md: 75px;
+    --gap-lg: 100px;
+ 
 }
 
 html{
@@ -40,26 +42,25 @@ body{
 }
 
 .hero{
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 100dvh;
-    padding-inline: var(--padding-lg);
-    padding-block: var(--padding-md);
-    gap: var(--padding-md);
+    padding: var(--gap-md) var(--gap-lg);
+    gap: var(--gap-md);
     
     
 }
 
 .hero-content{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     gap: var(--spacing-lg);
 }
 h1{
-    font-family: Outfit-Bold;
+    font-family: Inter-bold;
     font-size: var(--font-size-title);
 }
 h2{
@@ -74,36 +75,31 @@ h2{
 
 }
 
-.links{
+.buttons{
+    list-style: none;
     display: flex;
     align-items: center;
-    list-style: none;
-    gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
-
+    gap: var(--spacing-lg);
+    
 }
 
-
-
-.botao1{
+.btn-1{
     display: flex;
-    border: 2px solid var(--color-blue);
     padding: var(--spacing-md);
     background-color: var(--color-blue);
+    border: 2px solid var(--color-blue);
     text-decoration: none;
     color: var(--color-white);
     transition: .5s;
-    
-    
 }
 
-.botao1:hover{
+.btn-1:hover{
     background-color: var(--color-white);
     color: var(--color-blue);
 }
 
-
-.botao2{
+.btn-2{
     display: flex;
     border: 2px solid var(--color-blue);
     padding: var(--spacing-md);
@@ -112,7 +108,7 @@ h2{
     transition: .5s;
 }
 
-.botao2:hover{
+.btn-2:hover{
     background-color: var(--color-blue);
     color: var(--color-white);
 }
@@ -121,33 +117,33 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: var(--padding-md);
     width: 100%;
-
+    margin-left: var(--gap-md);
 }
+
 .hero-image img{
     width: 100%;
-    
-    border-radius: var(--spacing-md);
+    border-radius: var(--spacing-lg);
 }
 
-.conteudo{
+.areas-impacto{
+    min-height: 100dvh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100dvh;
-    padding: var(--padding-md);
+    flex-direction: column;
+    padding: var(--gap-md);
     gap: var(--spacing-sm);
 }
 
-.container{
+.areas-container{
     display: flex; 
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--padding-sm);
-    margin-top: var(--padding-lg);
+    margin-top: var(--gap-lg);
+    gap: var(--gap-sm);
+    
 }
 
 .card{
@@ -160,26 +156,27 @@ h2{
     background-color: var(--color-blue-light);
     gap: var(--spacing-md);
     padding-bottom: var(--spacing-sm);
-    height: 400px;
+    text-wrap: balance;
+    height: 450px;
 }
 .card p{
     margin-top: 10px;
+    font-size: var(--font-size-text);
 }
 .card img{
     width: 100%;
 }
 
-.sobre{
+.contexto{
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 100dvh;
-    padding-inline: var(--padding-lg);
-    padding-block: var(--padding-md);
-    gap: var(--padding-md);
+    padding: var(--gap-md) var(--gap-lg);
+    gap: var(--gap-md);
 }
 
-.sobre-content{
+.contexto-content{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -187,35 +184,35 @@ h2{
     gap: var(--spacing-lg);
 }
 
-.sobre-content p{
+.contexto-content p{
     text-align: justify;
     width: 100%;
     text-wrap: balance;
     font-size: var(--font-size-text);
 }
 
-.sobre-list{
+.contexto-list{
     list-style: none;
     display: flex;
     flex-direction: column;
 }
 
-.sobre-list li{
+.contexto-list li{
     margin: var(--spacing-md);
 }
-.sobre-image{
-    width: 100%;
+.contexto-image{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: var(--padding-md);
-}
-.sobre-image img{
     width: 100%;
-    border-radius: var(--spacing-md);
+    margin-left: var(--gap-md);
+}
+.contexto-image img{
+    width: 100%;
+    border-radius: var(--spacing-lg);
 }
 
-footer{
+.rodape{
     display: flex;
     align-items: center;
     justify-content: center;
