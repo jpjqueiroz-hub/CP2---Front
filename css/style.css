@@ -15,8 +15,8 @@
 }
 
 :root{
-    --color-blue: #405bff;
-    --color-white: #F7F8FC;
+    --color-blue: #5166ee;
+    --color-white: #f0f0f0;
     --color-blue-light: #E1EAFE;
     --color-text: #0F1117;
     --spacing-sm: 10px;
@@ -70,6 +70,7 @@ h2{
     text-align: justify;
     width: 100%;
     font-size: var(--font-size-text);
+    text-wrap: balance;
 
 }
 
@@ -91,7 +92,14 @@ h2{
     background-color: var(--color-blue);
     text-decoration: none;
     color: var(--color-white);
+    transition: .5s;
     
+    
+}
+
+.botao1:hover{
+    background-color: var(--color-white);
+    color: var(--color-blue);
 }
 
 
@@ -101,6 +109,12 @@ h2{
     padding: var(--spacing-md);
     text-decoration: none;
     color: var(--color-blue);
+    transition: .5s;
+}
+
+.botao2:hover{
+    background-color: var(--color-blue);
+    color: var(--color-white);
 }
 
 .hero-image{
@@ -108,11 +122,12 @@ h2{
     align-items: center;
     justify-content: center;
     margin-left: var(--padding-md);
+    width: 100%;
 
 }
 .hero-image img{
     width: 100%;
-    border: 2px solid var(--color-blue);  
+    
     border-radius: var(--spacing-md);
 }
 
@@ -144,9 +159,12 @@ h2{
     border: 1px solid var(--color-blue);
     background-color: var(--color-blue-light);
     gap: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    height: 400px;
 }
-
+.card p{
+    margin-top: 10px;
+}
 .card img{
     width: 100%;
 }
@@ -176,7 +194,17 @@ h2{
     font-size: var(--font-size-text);
 }
 
+.sobre-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-list li{
+    margin: var(--spacing-md);
+}
 .sobre-image{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,7 +212,6 @@ h2{
 }
 .sobre-image img{
     width: 100%;
-    border: 2px solid var(--color-blue);  
     border-radius: var(--spacing-md);
 }
 
